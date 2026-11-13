@@ -1,0 +1,59 @@
+GitHub Pages — opsætning for rgas666.com
+========================================
+
+STATUS 13/11-2026:
+  [x] Repo oprettet: github.com/Faraday22/rgas666 (Public)
+  [x] index.html og CNAME uploadet
+  [x] DNS hos Namecheap sat op og slår igennem
+  [ ] Pages slået til (Settings → Pages)
+  [ ] Custom domain + Enforce HTTPS
+  [ ] Mail-videresendelse hello@rgas666.com
+
+
+1. REPO — FÆRDIG
+   github.com/Faraday22/rgas666  —  Public
+
+
+2. FILER
+   index.html og CNAME ligger i rodet.
+   Ved opdatering: Add file → Upload files → træk index.html ind → Commit.
+   (.nojekyll er ikke nødvendig — siden er ren HTML uden Jekyll-syntaks.)
+
+
+3. PAGES — GØR DETTE NU
+   Settings → Pages
+   Source: Deploy from a branch
+   Branch: main  /  (root)   → Save
+   Siden svarer 404, indtil dette er gjort.
+
+
+4. CUSTOM DOMAIN
+   Settings → Pages → Custom domain: rgas666.com   → Save
+   Vent til det grønne flueben, sæt så "Enforce HTTPS" til.
+   CNAME-filen i rodet fortæller GitHub hvilket domæne der gælder —
+   den skal blive liggende, ellers glemmer GitHub domænet ved næste deploy.
+
+
+5. DNS — FÆRDIG (verificeret 13/11 kl. 02:36)
+   A Record      @      185.199.108.153
+   A Record      @      185.199.109.153
+   A Record      @      185.199.110.153
+   A Record      @      185.199.111.153
+   CNAME Record  www    faraday22.github.io.
+
+   Parkerings-records (162.255.119.64 og parkingpage.namecheap.com)
+   og URL Redirect Record på @ er slettet. Rør dem ikke igen.
+   Tjek med: dig rgas666.com +short   → skal give de fire 185.199.108-111.
+
+
+6. MAIL — MANGLER
+   Namecheap → Domain List → rgas666.com → Manage → Mail Settings
+   Email Forwarding: vælg "Email Forwarding" i dropdown → SAVE CHANGES
+   Tilføj forwarder:  hello  →  raguruandsqud666@gmail.com
+   Bekræft via linket, som Namecheap sender til Gmail (tjek spam).
+   Lad MX Record og Custom MX stå urørt.
+
+
+7. LØBENDE
+   Musik, tekster og links lægges i index.html.
+   Efter push/upload: 1-2 minutter, så er siden opdateret.
