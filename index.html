@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The Message — Ra Guru &amp; Squd 666</title>
-<meta name="description" content="The Message — three tracks from Ra Guru &amp; Squd 666. Out now on Apple Music and YouTube Music.">
+<meta name="description" content="The Message — three tracks from Ra Guru &amp; Squd 666. Out now on Apple Music, Spotify, Boomplay and YouTube Music.">
 <link rel="canonical" href="https://rgas666.com/">
 <meta property="og:type" content="music.album">
 <meta property="og:site_name" content="Ra Guru &amp; Squd 666">
 <meta property="og:title" content="The Message — Ra Guru &amp; Squd 666">
-<meta property="og:description" content="Three tracks. Out now on Apple Music and YouTube Music.">
+<meta property="og:description" content="Three tracks. Out now on Apple Music, Spotify, Boomplay and YouTube Music.">
 <meta property="og:url" content="https://rgas666.com/">
 <meta property="og:image" content="https://rgas666.com/cover.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -49,7 +49,7 @@
     display: flex; justify-content: center;
     padding: clamp(2rem, 6vw, 5rem) 1.5rem;
   }
-  main { width: 100%; max-width: 34rem; text-align: center; }
+  main { width: 100%; max-width: 36rem; text-align: center; }
   .cover {
     width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block;
     border: 1px solid var(--line);
@@ -60,11 +60,11 @@
   .artist { font-size: clamp(.95rem, 2.6vw, 1.1rem); letter-spacing: .06em; color: var(--muted); margin: 0; }
   .amp { color: var(--gold); }
   .rule { width: 3rem; height: 1px; background: var(--line); margin: 2.4rem auto; }
-  .listen { display: flex; flex-wrap: wrap; gap: .7rem; justify-content: center; }
+  .listen { display: flex; flex-wrap: wrap; gap: .55rem; justify-content: center; }
   .btn {
     display: inline-flex; align-items: center; gap: .55rem;
-    padding: .8rem 1.4rem; border: 1px solid #4a4640; color: var(--fg);
-    text-decoration: none; font-size: .95rem; letter-spacing: .04em;
+    padding: .75rem 1.1rem; border: 1px solid #4a4640; color: var(--fg);
+    text-decoration: none; font-size: .9rem; letter-spacing: .03em;
     font-family: inherit; transition: border-color .15s, color .15s;
   }
   .btn:hover { border-color: var(--gold); color: var(--gold); }
@@ -109,6 +109,10 @@
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm4.3 14.4a.8.8 0 01-1.1.3c-3-1.8-6.7-2.2-11-1.2a.8.8 0 11-.4-1.5c4.7-1.1 8.8-.6 12.1 1.4.4.2.5.7.4 1zm1.1-2.6a1 1 0 01-1.3.3c-3.4-2.1-8.5-2.7-12.5-1.5a1 1 0 11-.6-1.9c4.6-1.4 10.3-.7 14.2 1.7.4.3.6.9.2 1.4zm.1-2.7C13.4 8.7 6.9 8.5 3.6 9.5a1.2 1.2 0 11-.7-2.3c3.9-1.2 11.1-.9 15.4 1.7a1.2 1.2 0 01-1.2 2.2z"/></svg>
       Spotify
     </a>
+    <a class="btn" data-platform="boomplay" href="#" hidden>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10h2.4v4H4v-4zm3.6-3h2.4v10H7.6V7zm3.6-2.4h2.4v14.8h-2.4V4.6zm3.6 3h2.4v8.8h-2.4V7.6zm3.6 2.8H21v3.2h-2.6v-3.2z"/></svg>
+      Boomplay
+    </a>
   </div>
   <p class="note" id="listen-note"></p>
 
@@ -134,16 +138,17 @@
 
 <script>
 /* ── Streaming links ────────────────────────────────────────────────
-   Paste the two URLs between the quotes. Any platform left empty is
+   Paste the URLs between the quotes. Any platform left empty is
    hidden automatically, so the page never shows a dead button.
    ─────────────────────────────────────────────────────────────────── */
 const LINKS = {
   apple:   "https://music.apple.com/us/album/the-message-single/6838480344",
   youtube: "https://music.youtube.com/watch?v=p61U0iRbv8c",
-  spotify: ""
+  spotify: "https://open.spotify.com/album/7akWyE7mBiIfJC6UWxUsBJ",
+  boomplay:"https://www.boomplay.com/albums/EQWBvfaHJ8U1zLKIW9H667z2"
 };
 
-const NAMES = { apple: "Apple Music", youtube: "YouTube Music", spotify: "Spotify" };
+const NAMES = { apple: "Apple Music", youtube: "YouTube Music", spotify: "Spotify", boomplay: "Boomplay" };
 const live = [];
 
 for (const [key, url] of Object.entries(LINKS)) {
